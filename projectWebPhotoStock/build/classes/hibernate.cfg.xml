@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.enable_lazy_load_no_trans">true</property>
+  <mapping class="photostock.entities.Buyer"/>
+  <mapping class="photostock.entities.BuyerRole"/>
+  <mapping class="photostock.entities.BuyerRoleId"/>
+  <mapping class="photostock.entities.Category"/>
+  <mapping class="photostock.entities.Discount"/>
+  <mapping class="photostock.entities.Item"/>
+  <mapping class="photostock.entities.Membership"/>
+  <mapping class="photostock.entities.Orders"/>
+  <mapping class="photostock.entities.Ordersdetail"/>
+  <mapping class="photostock.entities.OrdersdetailId"/>
+  <mapping class="photostock.entities.Role"/>
+  <mapping class="photostock.entities.Seller"/>
+  <mapping class="photostock.entities.Transaction"/>
+ </session-factory>
+</hibernate-configuration>

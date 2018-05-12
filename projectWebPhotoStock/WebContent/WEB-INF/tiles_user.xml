@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<definition name="template" template="/WEB-INF/jsp/templates/templateUser.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+		<put-attribute name="header_iner" value=""></put-attribute>
+	</definition>
+	<definition name="templateHollow" template="/WEB-INF/jsp/templates/templateHollow.jsp">
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	
+	<definition name="templateSellerDashboard1" template="/WEB-INF/jsp/templates/templateSellerDashboard1.jsp">
+		<put-attribute name="contentDashboard1" value=""></put-attribute>
+	</definition>
+	
+	
+	<definition name="home.index" extends="template">
+		<put-attribute name="header_iner" value="/WEB-INF/jsp/user/home/header_iner.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/jsp/user/home/index.jsp"></put-attribute>		
+    </definition>
+    
+    <!-- Dashboard Seller tiles ////////////////////////////// -->
+    <definition name="dashboardSeller.index" extends="templateSellerDashboard1">
+		<put-attribute name="contentDashboard1" value="/WEB-INF/jsp/user/dashboard/seller/index.jsp"></put-attribute>		
+    </definition>
+    <definition name="dashboardSeller.profile" extends="templateSellerDashboard1">
+		<put-attribute name="contentDashboard1" value="/WEB-INF/jsp/user/dashboard/seller/profile.jsp"></put-attribute>		
+    </definition>
+    <definition name="dashboardSeller.settingProfile" extends="templateSellerDashboard1">
+		<put-attribute name="contentDashboard1" value="/WEB-INF/jsp/user/dashboard/seller/settingProfile.jsp"></put-attribute>		
+    </definition>
+    <definition name="dashboardSeller.products.table" extends="templateSellerDashboard1">
+		<put-attribute name="contentDashboard1" value="/WEB-INF/jsp/user/dashboard/seller/productsTable.jsp"></put-attribute>		
+    </definition>
+    <definition name="dashboardSeller.products.add" extends="templateSellerDashboard1">
+		<put-attribute name="contentDashboard1" value="/WEB-INF/jsp/user/dashboard/seller/productsAdd.jsp"></put-attribute>		
+    </definition>
+    <!-- End Dashboard Seller tiles //////////////////////////-->
+    
+    
+    
+	<definition name="account.loginSeller" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/loginTien.jsp"></put-attribute>
+	</definition>
+	<definition name="account.loginBuyer" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/login.jsp"></put-attribute>
+	</definition>
+	<definition name="account.registerToBuy" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/registerToBuy.jsp"></put-attribute>
+	</definition>
+	<definition name="account.registerToSale" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/registerToSale/registerToSale.jsp"></put-attribute>
+	</definition>
+	<definition name="account.registerToSale.detail" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/registerToSale/detail.jsp"></put-attribute>
+	</definition>
+	<definition name="account.registerToSale.detail.acitveAccountSeller" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/registerToSale/activeAccountSeller.jsp"></put-attribute>
+	</definition>
+	<definition name="account.registerToSale.successActiveSeller" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/registerToSale/successActiveSeller.jsp"></put-attribute>
+	</definition>
+	<definition name="contact.index" extends="template">
+		<put-attribute name="header_iner" value="/WEB-INF/jsp/user/contact/header_iner_contact.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/jsp/user/contact/index.jsp"></put-attribute>
+	</definition>
+	<definition name="category.city" extends="template">
+		<put-attribute name="header_iner" value=""></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/jsp/user/category/city.jsp"></put-attribute>
+	</definition>
+	<definition name="product.tea" extends="template">
+		<put-attribute name="header_iner" value=""></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/jsp/user/product/tea.jsp"></put-attribute>
+	</definition>
+
+	<!-- Them cua Trong -->
+	<definition name="account.success" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/success.jsp"></put-attribute>
+	</definition>
+	<definition name="account.forgotPass" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/forgotPass.jsp"></put-attribute>
+	</definition>
+	<definition name="account.doGetPass" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/doGetPass.jsp"></put-attribute>
+	</definition>
+	<definition name="account.profile" extends="templateHollow">
+		<put-attribute name="body" value="/WEB-INF/jsp/user/account/profileBuyer.jsp"></put-attribute>
+	</definition>
+	<definition name="category.index" extends="template">
+		<put-attribute name="header_iner" value=""></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/jsp/user/category/index.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
